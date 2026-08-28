@@ -21,6 +21,7 @@
   --muted:         #a3a3a3;   /* secondary text */
   --border:        rgba(255,255,255,.1);
   --font-sans:     'Inter', system-ui, -apple-system, sans-serif;
+  --font-blanka: 'BLANKA', sans-serif;
   --radius:        0.625rem;
   --radius-lg:     1rem;
   --radius-xl:     1.5rem;
@@ -143,7 +144,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 .logo {
   font-size: 1.5rem; font-weight: 900; letter-spacing: -.04em;
-  display: flex; align-items: center; gap: .55rem;
+  display: flex; align-items: center; gap: .55rem; font-family: var(--font-blanka);
 }
 .logo-ax  { color: var(--primary); text-shadow: 0 0 10px rgba(var(--primary-rgb),.4); }
 .logo-velo{ color: #fff; }
@@ -323,13 +324,24 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 /* title */
 .hero-title {
+  font-family: var(--font-blanka);
   font-size: clamp(4rem, 18vw, 12rem);
-  font-weight: 900; line-height: 1; letter-spacing: -.05em;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: .02em;
   animation: hero-title-in .8s ease .2s both;
   margin-bottom: 0;
 }
-.hero-ax   { color: var(--primary); text-shadow: 0 0 60px rgba(var(--primary-rgb),.6); }
-.hero-velo { color: #fff; }
+.hero-ax {
+  font-family: var(--font-blanka);
+  color: var(--primary);
+  text-shadow: 0 0 60px rgba(var(--primary-rgb),.6);
+}
+
+.hero-velo {
+  font-family: var(--font-blanka);
+  color: #fff;
+}
 /* sub */
 .hero-sub {
   font-size: clamp(1.125rem, 2.5vw, 1.5rem);
