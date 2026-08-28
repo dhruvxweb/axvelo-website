@@ -104,5 +104,12 @@ window.PROJECTS_DATA = [
       "Canva"
     ],
     "image": "assets/images/project-nk-flex.png"
-  }
+  },
+  {
+  title: "Shri Hariram Baba Jagran",
+  category: "Graphic Design / Event Promotion",
+  description: "Devotional jagran event poster designed for social media and event promotion.",
+  tools: ["Canva", "Graphic Design"],
+  image: "assets/images/project-hariram-baba-jagran.png"
+}
 ]
