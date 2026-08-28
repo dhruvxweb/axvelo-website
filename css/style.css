@@ -324,7 +324,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 /* title */
 .hero-title {
   font-size: clamp(4rem, 18vw, 12rem);
-  font-weight: 900; line-height: 1; letter-spacing: -.02em;
+  font-weight: 900; line-height: 1; letter-spacing: -.01em;
   animation: hero-title-in .8s ease .2s both;
   margin-bottom: 0;
 }
