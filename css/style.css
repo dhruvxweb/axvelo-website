@@ -175,14 +175,13 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   pointer-events: none;
   z-index: 0;
 }
-.hero-logo-watermark img {
-  width: clamp(220px, 40vw, 420px);
+..hero-logo-watermark img {
+  width: clamp(180px, 28vw, 320px);
   height: auto;
-  opacity: .09;
-  filter: blur(2px) drop-shadow(0 0 24px rgba(255,107,0,.4));
+  opacity: .045;
+  filter: blur(3px) drop-shadow(0 0 20px rgba(255,107,0,.25));
   animation: logo-float 7s ease-in-out infinite;
 }
-
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-link {
   font-size: .875rem; font-weight: 500; color: var(--muted);
@@ -324,11 +323,10 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 /* title */
 .hero-title {
-  font-family: var(--font-blanka);
-  font-size: clamp(4rem, 18vw, 12rem);
-  font-weight: normal;
+  font-size: clamp(3.5rem, 11vw, 8rem);
+  font-weight: 900;
   line-height: 1;
-  letter-spacing: .02em;
+  letter-spacing: -.05em;
   animation: hero-title-in .8s ease .2s both;
   margin-bottom: 0;
 }
