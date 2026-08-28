@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "BLANKA";
+  src: url("../assets/Blanka-Regular%5B1%5D.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ════════════════════════════════════════════════
    AXVELO — Main Stylesheet
    ✏️  Change colors in the :root block below.
