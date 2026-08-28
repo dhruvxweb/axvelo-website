@@ -72,9 +72,9 @@ window.SITE_CONFIG = {
     quote: "We Move Fast | We Move Smart.",
     skills: ["Graphic Design", "Website Design", "Video Editing", "Branding", "Digital Marketing"],
     stats: [
-      { label: "Projects Completed", value: 15,  suffix: "+" },
-      { label: "Happy Clients",       value: 12,  suffix: "+" },
-      { label: "Creative Designs",    value: 9,   suffix: "+" },
+      { label: "Projects Completed", value: 18,  suffix: "+" },
+      { label: "Happy Clients",       value: 14,  suffix: "+" },
+      { label: "Creative Designs",    value: 13,   suffix: "+" },
       { label: "Websites Delivered",  value: 3,   suffix: "+" },
     ],
   },
