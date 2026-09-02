@@ -871,37 +871,3 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   background: var(--primary); color: #fff;
   box-shadow: 0 0 25px rgba(var(--primary-rgb),.6);
 }
-/* ══════════════════════════════════════════════
-   CLICKABILITY & OVERLAY FIX (Z-INDEX)
-══════════════════════════════════════════════ */
-
-/* 1. Sare background aur mouse overlays ko unclickable banao */
-#bg-layer,
-#particles-container,
-#mouse-glow,
-.noise-overlay,
-.mesh-blob {
-  pointer-events: none !important;
-}
-
-/* 2. Contact cards aur Book Now button ko click allow karo */
-.section-contact,
-.contact-cta,
-.contact-cards,
-.contact-card,
-#contact-book-btn,
-#contact-email-card,
-.footer-social-btn,
-.floating-btn {
-  position: relative;
-  z-index: 9999 !important;
-  pointer-events: auto !important;
-  cursor: pointer !important;
-}
-
-/* 3. Link ke andar ke icons/text par click miss na ho */
-.contact-card *,
-#contact-book-btn * {
-  pointer-events: none;
-}
-
