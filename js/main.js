@@ -39,21 +39,24 @@
     const fc = document.getElementById('footer-copyright');
     if (fc && ft.copyright) fc.textContent = '© ' + new Date().getFullYear() + ' ' + ft.copyright;
 
-   // Social links (footer)
-_setHref('footer-ig',    s.instagram || '#');
-_setHref('footer-wa',    s.whatsapp  || '#');
-_setHref('footer-email', s.email     || '#');
+     // Fallback email link string
+    const emailLink = s.email || (cfg.email ? `mailto:${cfg.email}?subject=Inquiry&body=Hello%20Axvelo` : 'mailto:axveloofficial@gmail.com');
 
-// Floating buttons
-_setHref('floating-ig', s.instagram || '#');
-_setHref('floating-wa', s.whatsapp  || '#');
+    // Social links (footer)
+    _setHref('footer-ig',    s.instagram || 'https://instagram.com/axvelo.in');
+    _setHref('footer-wa',    s.whatsapp  || 'https://wa.me/918619890337');
+    _setHref('footer-email', emailLink);
 
-// Contact section
-_setHref('contact-email-card', s.email    || '#');
-_setHref('contact-wa-card',    s.whatsapp || '#');
-_setHref('contact-ig-card',    s.instagram|| '#');
-_setHref('contact-book-btn',   s.email    || '#');
-    
+    // Floating buttons
+    _setHref('floating-ig', s.instagram || 'https://instagram.com/axvelo.in');
+    _setHref('floating-wa', s.whatsapp  || 'https://wa.me/918619890337');
+
+    // Contact section
+    _setHref('contact-email-card', emailLink);
+    _setHref('contact-wa-card',    s.whatsapp  || 'https://wa.me/918619890337');
+    _setHref('contact-ig-card',    s.instagram || 'https://instagram.com/axvelo.in');
+    _setHref('contact-book-btn',   emailLink);
+
     const cev = document.getElementById('contact-email-value');
     if (cev && cfg.email) cev.textContent = cfg.email;
 
