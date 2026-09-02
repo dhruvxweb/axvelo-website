@@ -20,7 +20,7 @@ window.SITE_CONFIG = {
   social: {
     instagram: "https://instagram.com/dhruvxbeniwal",
     whatsapp:  "https://wa.me/918619890337",
-    email:     "https://mail.google.com/mail/?view=cm&fs=1&to=axveloofficial@gmail.com",
+    email:     "https://mail.google.com/mail/axveloofficial@gmail.com",
   },
 
   /* ── Tools Marquee ──────────────────────────────────── */
