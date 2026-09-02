@@ -51,7 +51,7 @@ whatsapp: "918619890337",               // ← country code + number, no +
 social: {
   instagram: "https://instagram.com/YOUR_HANDLE",
   whatsapp:  "https://wa.me/918619890337",
-  email:     "axveloofficial@gmail.com",
+  email:     "mail.google.com",
 },
 ```
 
