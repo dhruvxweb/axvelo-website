@@ -13,14 +13,14 @@ window.SITE_CONFIG = {
   description: "AXVELO is a fast, smart creative agency offering branding, graphic design, video editing, and digital marketing services that help brands stand out and grow.",
 
   /* ── Contact ────────────────────────────────────────── */
-  email:     "axveloofficial@gmail.com",
+  email:     "mailto:axveloofficial@gmail.com",
   whatsapp:  "918619890337",   // include country code, no + sign
 
   /* ── Social Links ───────────────────────────────────── */
   social: {
     instagram: "https://instagram.com/dhruvxbeniwal",
     whatsapp:  "https://wa.me/918619890337",
-    email:     "axveloofficial@gmail.com",
+    email:     "mailto:axveloofficial@gmail.com",
   },
 
   /* ── Tools Marquee ──────────────────────────────────── */
