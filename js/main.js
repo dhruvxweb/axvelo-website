@@ -39,26 +39,28 @@
     const fc = document.getElementById('footer-copyright');
     if (fc && ft.copyright) fc.textContent = '© ' + new Date().getFullYear() + ' ' + ft.copyright;
 
-     // Fallback email link string
+    // Direct Email Link Fallback
     const emailLink = s.email || (cfg.email ? `mailto:${cfg.email}?subject=Inquiry&body=Hello%20Axvelo` : 'mailto:axveloofficial@gmail.com');
+    const waLink = s.whatsapp || 'https://wa.me/918619890337';
+    const igLink = s.instagram || 'https://instagram.com/axvelo.in';
 
     // Social links (footer)
-    _setHref('footer-ig',    s.instagram || 'https://instagram.com/axvelo.in');
-    _setHref('footer-wa',    s.whatsapp  || 'https://wa.me/918619890337');
+    _setHref('footer-ig',    igLink);
+    _setHref('footer-wa',    waLink);
     _setHref('footer-email', emailLink);
 
     // Floating buttons
-    _setHref('floating-ig', s.instagram || 'https://instagram.com/axvelo.in');
-    _setHref('floating-wa', s.whatsapp  || 'https://wa.me/918619890337');
+    _setHref('floating-ig', igLink);
+    _setHref('floating-wa', waLink);
 
     // Contact section
     _setHref('contact-email-card', emailLink);
-    _setHref('contact-wa-card',    s.whatsapp  || 'https://wa.me/918619890337');
-    _setHref('contact-ig-card',    s.instagram || 'https://instagram.com/axvelo.in');
+    _setHref('contact-wa-card',    waLink);
+    _setHref('contact-ig-card',    igLink);
     _setHref('contact-book-btn',   emailLink);
-
+    
     const cev = document.getElementById('contact-email-value');
-    if (cev && cfg.email) cev.textContent = cfg.email;
+    if (cev && (cfg.email || s.email)) cev.textContent = cfg.email || "axveloofficial@gmail.com";
 
     // Instagram handle (contact card)
     const igv = $('#contact-ig-card .contact-card-value');
@@ -372,7 +374,7 @@
         if (!entry.isIntersecting) return;
         const el    = entry.target;
         if (el.dataset.animated === "true") return;
-el.dataset.animated = "true";
+        el.dataset.animated = "true";
         const end   = parseInt(el.dataset.count, 10);
         const sfx   = el.dataset.suffix || '';
         const dur   = 1800;
@@ -401,14 +403,21 @@ el.dataset.animated = "true";
   }
 
   /* ─────────────────────────────────────────────
-     CTA smooth-scroll links
+     CTA smooth-scroll links (Fixed for mailto & external links)
   ───────────────────────────────────────────── */
   function initSmoothScrollLinks() {
     $$('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
-        const id = a.getAttribute('href').slice(1);
+        const rawHref = a.getAttribute('href');
+        // Do not intercept if it's just '#' or not an element ID
+        if (!rawHref || rawHref === '#' || rawHref.length <= 1) return;
+
+        const id = rawHref.slice(1);
         const target = document.getElementById(id);
-        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
       });
     });
   }
