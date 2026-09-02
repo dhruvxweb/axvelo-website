@@ -39,20 +39,20 @@
     const fc = document.getElementById('footer-copyright');
     if (fc && ft.copyright) fc.textContent = '© ' + new Date().getFullYear() + ' ' + ft.copyright;
 
-    // Social links (footer)
-_setHref('footer-ig', s.instagram || '#');
-_setHref('footer-wa', s.whatsapp || '#');
-_setHref('footer-email', 'mailto:axveloofficial@gmail.com');
+   // Social links (footer)
+_setHref('footer-ig',    s.instagram || '#');
+_setHref('footer-wa',    s.whatsapp  || '#');
+_setHref('footer-email', s.email     || '#');
 
 // Floating buttons
 _setHref('floating-ig', s.instagram || '#');
-_setHref('floating-wa', s.whatsapp || '#');
+_setHref('floating-wa', s.whatsapp  || '#');
 
 // Contact section
-_setHref('contact-email-card', 'mailto:axveloofficial@gmail.com');
-_setHref('contact-wa-card', s.whatsapp || '#');
-_setHref('contact-ig-card', s.instagram || '#');
-_setHref('contact-book-btn', 'mailto:axveloofficial@gmail.com');
+_setHref('contact-email-card', s.email    || '#');
+_setHref('contact-wa-card',    s.whatsapp || '#');
+_setHref('contact-ig-card',    s.instagram|| '#');
+_setHref('contact-book-btn',   s.email    || '#');
     
     const cev = document.getElementById('contact-email-value');
     if (cev && cfg.email) cev.textContent = cfg.email;
